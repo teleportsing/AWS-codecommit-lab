@@ -1,7 +1,4 @@
-# AWS-codecommit-lab
-Working with AWS CodeCommit
-
-# Overview
+# Working with AWS CodeCommit
 
 AWS CodeCommit is a highly scalable, managed source control service thathosts private Git repositories. Codecommit stores your data in Amazon S3 andAmazon Dynamodb giving your repositories high scalability, availability, anddurability. You simply create a repository to store your code. There is nohardware to provision and scale or software to install, configure, and operate
 
