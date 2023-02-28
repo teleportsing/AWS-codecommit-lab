@@ -37,7 +37,7 @@ AWS Codecommit is a highly scalable , managed source control service that hostsp
 According to Microsofts website , Visual Studio Code combines the streamlined Uof a modern editor with rich code assistance and navigation , and an integrateddebugging experience - without the need for a full IDE . It is currently free and it runson Windows , Mac , and Linux . It includes features for working with Git coderepositories , so it is a convenient tool for learning AWS Codecommit , but numerousother Git tools are available ( free and commercial ) that work similarly with AWSCodecommit . This lab is not meant to be a complete introduction to Visual StudioCode
 
 
-# Task 1 : Create an AWS Codecommitrepository
+# Task 1 : Create an AWS Codecommit repository
 
 In this task , you will create a Code Commit repository using the Code Commitconsole
 
