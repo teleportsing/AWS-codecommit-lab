@@ -14,6 +14,6 @@ This lab demonstrates how to:
  * Synchronize a local repository with an AWS Code Commit repository
 
 
-# PrerequisitesStudents 
+# Prerequisites
 
-should have some development experience and understand the principlesof source code repositories , and has some prior development experience . Studentsshould be comfortable with making SSH connections to instances running inAmazon EC2 , and using Linux commands and editors from the command line innux Students should have taken at a minimum Introduction to Amazon ElasticCompute Cloud ( EC2 ) prior to taking this lab
+Students should have some development experience and understand the principlesof source code repositories , and has some prior development experience . Studentsshould be comfortable with making SSH connections to instances running inAmazon EC2 , and using Linux commands and editors from the command line innux Students should have taken at a minimum Introduction to Amazon ElasticCompute Cloud ( EC2 ) prior to taking this lab
