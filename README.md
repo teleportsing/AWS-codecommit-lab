@@ -63,11 +63,132 @@ In this lab , you will not configure notifications
 A Connection steps page will appear . This page explains how to connect your computer toyour Code Commit repository . It lists the prerequisites for using Code Commit . It alsodisplays the steps that you need to run to clone the remote repository to your computer
 
 
- 7. Make sure you have selected the `HTTPS` tab
+7. Make sure you have selected the `HTTPS` tab
+
+8. At the top-right of the screen , choose `Clone URL`
+
+9.Select Clone HTTPS 
+
+10. Paste the clone URL into your text editor
+
+You will use this command later to clone your remote repository to your local repository
 
 
+# Task 2 : Connect to the Windows EC2 instance
+
+In this task , you will:
+
+ * Connect to your EC2 Windows instance . You will use this instance to create alocal git repository . An instance profile is associated with your EC2 instance . TheIstance profile allows you to access Codecommit from your EC2 instance
+ 
+ * Configure the AWS Tools for Windows Powershell to enable connections to the AWS Codecommit service
+ 
+ * Create your local repository by cloning your remote Codecommit repository
+
+The Git client and Visual Studio Code applications have been installed on yourWindows EC2 instance.
+
+The Git client has been installed with all of the default options with exception of theollowing changes :
 
 
+ * Adjusting your PATH environment : Use Git from the Windows CommandPromp
+ 
+ * Configuring extra options : De-selected - enable Git Credential Manager ( Thisoption is not used . Instead the credential helper will be used in your lab )
+ 
+ Connect to the Windows instance using Apache Guacamole
+
+11. Copy the Guacamoleurl value from the list to the left of these instructions , andthen paste it into a new web browser tab
+
+12. On the Apache Guacamole sign-in page
+
+ * For Username . enter studentor Password , copy and paste the Administrat
+ 
+ * For password value listed to the leftof these instructionsChoose Login
+ 
+ 
+The connection to your remote instance should start momentarily . After you open aconnection , you will see an image of the dev instance desktop . You can interactwith this image just as you would your normal desktop or any remote desktopclient
+
+You are now connected to the Windows instance in your web browser usingGuacamole
+
+Note : If you prompted with a Networks pop-up window asking : Do you want toallow your PC to be discoverable by other Pcs and devices on this networkChoose No
 
 
+13. Note : How to copy and paste when using Guacamole browser session
 
+ * To open the clipboard editor:
+ 
+   * On Windows , press `Ctrl + Alt + Shift`
+   * On macos , press `command control shift`
+   
+ * Copy the appropriate text from the lab instructions and paste it to the clipboardedito
+ * To close the clipboard edito
+ 
+  * On Windows , press `Ctrl + Alt + Shift`
+  * On macos , press `command control shift`
+  
+ * You can now use regular paste commands in your session from the clipboardYou can also edit or replace the contents of the Guacamole clipboard forsubsequent copies
+ 
+Configure the AWS Tools for Windows Power she
+
+14. In your remote session , choose the Windows Start = a button , then type Power Shell
+
+15. In the list of programs , choose Windows Powershel
+
+16. Set the default AWS region for running AWS CLI commands by doing thefollowing
+
+ * Enter : set-defaultawsregion - region 
+ 
+ * REGIONReplace REGION With REGION value located to the left of these instructions
+ 
+ * Press Enter
+ 
+ 17. Enable the Git credential helper to send the path to repositories by entering:
+ 
+ ```
+git config --global credential.helper '!aws codecommit credential-helper $@'
+git config --global credential.UseHttpPath true
+ ```
+
+The AWS Tools for Windows Powershell comes with a Git credential helper that youcan use with AWS CodeCommnit
+
+18. Run the following command to configure the credential helper to use the defaultAWS credential profile
+
+ `. "C:\\Program Files (x86)\\AWS Tools\\CodeCommit\\git-credential-awss4.exe"`
+ 
+The dot space on the front of the command is required to run an EXE in Powersheland the double-quotes are required when working with paths and filenames thatcontain spaces
+
+19. When prompted to install the Git credential helper to generate AWSSV4signatures , choose Yes
+
+20. Run the following commands in Windows Powershell to create a new codefolder to use for the rest of this lab
+
+
+```
+cd \
+md code
+cd code
+```
+
+ * Paste `git clone CLONEURL`
+ * Replace CLONEURL with the clone URL you copied earlier
+ * Press Enter
+ 
+You should see the following message
+
+Git Cloning into `demo…… ` 
+
+warning You appear to have cloned an empty repository
+
+
+Next , you will set up your user name and email address to in the git configurationhis will make it easier to identify your commits
+
+22. Configure your git username by doing the following：
+
+ * Enter git config - -global user name NAME
+ * Replace NAME With a username
+ * Press Enter
+ 
+ 
+23. Configure your git username by doing the following： 
+
+ * Enter git config --global user.email EMAIL
+ * Replace Email With a email
+ * Press Enter
+ 
