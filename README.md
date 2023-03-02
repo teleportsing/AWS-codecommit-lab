@@ -254,38 +254,3 @@ The two files that you added to your repository should be displayed
 * [AWS Codecommit](https://aws.amazon.com/codecommit/resources/)
 * [AWS Training and Certification](https://aws.amazon.com/training/)
 
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
